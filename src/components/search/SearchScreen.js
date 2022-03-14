@@ -1,5 +1,5 @@
 
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { getHeroesByName } from "../../selectors/getHeroesByName";
 import { HeroCard } from "../hero/HeroCard";
@@ -16,7 +16,7 @@ export const SearchScreen = () => {
         searchText: q,
     };
 
-    const [ values, handleInputChange, reset ] = useForm( initialForm );
+    const [ values, handleInputChange ] = useForm( initialForm );
     const { searchText } = values;
 
     const heroes =  useMemo(() => getHeroesByName(q), [q]);
