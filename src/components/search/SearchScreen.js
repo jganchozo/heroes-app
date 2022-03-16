@@ -23,6 +23,8 @@ export const SearchScreen = () => {
     
     
     const handleSearch = (e) => {
+
+        //console.log(searchText);
         e.preventDefault();
         navigate(`?q=${searchText}`);
     }
