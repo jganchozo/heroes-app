@@ -8,6 +8,6 @@ export const getHeroesByPublisher = (publiher) => {
         throw new Error(`${publiher} is not a valid publisher`);
     }
 
-    console.log('getHeroesByPublisher Called');
+    //console.log('getHeroesByPublisher Called');
     return heroes.filter(hero => hero.publisher === publiher);
 }
